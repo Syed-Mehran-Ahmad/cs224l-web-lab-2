@@ -55,6 +55,44 @@
     </style>
 </head>
 <body>
+    <header>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+      <li><a href="profile.html" class="nav-link" data-page="profile">Profile</a></li>
+      <li><a href="registration.html" class="nav-link" data-page="registration">Registration</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+  }
+  nav li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  nav li a.active {
+    color: blue;
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  // Highlight active page automatically
+  const pageLinks = document.querySelectorAll('.nav-link');
+  const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+  pageLinks.forEach(link => {
+    if (link.dataset.page === currentPage || (currentPage === '' && link.dataset.page === 'home')) {
+      link.classList.add('active');
+    }
+  });
+</script>
 
     <h2>Student Registration Form</h2>
     
@@ -104,5 +142,6 @@
         <button type="submit">Submit</button>
     </form>
 
+    <p><a href="index.html">Back to Home</a></p>
 </body>
 </html>
