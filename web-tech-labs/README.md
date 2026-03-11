@@ -11,6 +11,8 @@ This is my personal portfolio website for showcasing my lab exercises and projec
 
 ## Author
 Syed Mehran Ahmad
+
+
 # Deployment Process
 
 1. Added all project files to Git.
